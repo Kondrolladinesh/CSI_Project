@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import './NavBar.css';
-import companyLogo from '../Images/CompanyLogo1.png'
+import companyLogo from '../Images/CompanyLogo1.png';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -23,16 +24,18 @@ const NavBar = () => {
       <div className='nav-item-list'>
         <ul className={`navbar-nav ${isMenuOpen ? 'active' : ''}`}>
             <li className="nav-item">
-                <a href="/home" className="nav-link">Home</a>
+                <NavLink to="/home" className="nav-link">Home</NavLink>
+                // <Navigate to="/home"/>
             </li>
             <li className="nav-item">
-                <a href="/viewblog" className="nav-link">View Blogs</a>
+                <NavLink to="/viewblog" className="nav-link">View Blogs</NavLink>
+                // <Navigate to="/home"/>
             </li>
             {/* <li className="nav-item">
                 <a href="/contact" className="nav-link">Contact</a>
             </li> */}
             <li className="nav-item">
-                <a href="/" className="nav-link" style={{color:'red'}} onClick={()=>localStorage.setItem("authToken",'')}>Logout</a>
+                <NavLink to="/" className="nav-link" style={{color:'red'}} onClick={()=>localStorage.setItem("authToken",'')}>Logout</NavLink>
             </li>
         </ul>
       </div>
