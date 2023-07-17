@@ -25,11 +25,9 @@ const NavBar = () => {
         <ul className={`navbar-nav ${isMenuOpen ? 'active' : ''}`}>
             <li className="nav-item">
                 <NavLink to="/home" className="nav-link">Home</NavLink>
-                // <Navigate to="/home"/>
             </li>
             <li className="nav-item">
                 <NavLink to="/viewblog" className="nav-link">View Blogs</NavLink>
-                // <Navigate to="/home"/>
             </li>
             {/* <li className="nav-item">
                 <a href="/contact" className="nav-link">Contact</a>
