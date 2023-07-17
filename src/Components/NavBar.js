@@ -35,7 +35,7 @@ const NavBar = () => {
                 <a href="/contact" className="nav-link">Contact</a>
             </li> */}
             <li className="nav-item">
-                <NavLink to="/" className="nav-link" style={{color:'red'}} onClick={()=>localStorage.setItem("authToken",'')}>Logout</NavLink>
+                <NavLink to="/" className="nav-link" onClick={()=>localStorage.setItem("authToken",'')}>Logout</NavLink>
             </li>
         </ul>
       </div>
