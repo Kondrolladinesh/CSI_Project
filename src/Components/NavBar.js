@@ -14,9 +14,9 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="nav-header">
-        <a href="/home" className="nav-logo">
+        <NavLink href="/home" className="nav-logo">
           <img src={companyLogo} alt='company-logo'/>
-        </a>
+        </NavLink>
         <div className={`nav-toggle ${isMenuOpen ? 'active' : ''}`} onClick={handleMenuClick}>
           <FaBars />
         </div>
