@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect } from 'react';
 import "./Routes.css";
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const Register = () => {
     const [name, setName] = useState("");
@@ -27,6 +27,7 @@ const Register = () => {
             setFlag(false);
             setAllUsers([...allUsers, { email, password, name, phone}]);
             console.log("Saved in Local Storage");
+            <Navigate to="/"/>
         }
     }
   return (
