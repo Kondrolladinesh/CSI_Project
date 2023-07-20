@@ -6,20 +6,18 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div>
-          <div className="company-info">
-            <h3>Celebal Technologies</h3>
-            <p>123 Main Street, City,<br/> Country</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Email: enterprisesales@celebaltech.com</p>
-          </div>
-          <div className="company-info">
-            <h3>Our services</h3>
-            <p>Azure</p>
-            <p>Big Data</p>
-            <p>Data Science</p>
-            <p>MS Teams</p>
-          </div>
+        <div className="company-info">
+          <h3>Celebal Technologies</h3>
+          <p>123 Main Street, City,<br/> Country</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: enterprisesales@celebaltech.com</p>
+        </div>
+        <div className="company-info">
+          <h3>Our services</h3>
+          <p>Azure</p>
+          <p>Big Data</p>
+          <p>Data Science</p>
+          <p>MS Teams</p>
         </div>
         <div className="company-info">
           <h3>POWER PLATFORM</h3>
