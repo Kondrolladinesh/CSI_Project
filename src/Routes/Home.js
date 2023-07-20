@@ -2,7 +2,8 @@ import React from 'react';
 import NavBar from '../Components/NavBar';
 import './Home.css';
 import { NavLink } from 'react-router-dom';
-import img1 from '../Images/bg5.avif'
+import img1 from '../Images/bg5.avif';
+import Footer from '../Components/Footer';
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
           <img src={img1} alt='bg1'/>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

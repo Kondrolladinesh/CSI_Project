@@ -57,7 +57,6 @@ const Login = () => {
                         </alert>}
             </form>
                 :<Navigate to="/home"/>
-
             }
     </div>
   )
