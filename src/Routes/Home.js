@@ -6,10 +6,13 @@ import img1 from '../Images/bg5.avif';
 import Footer from '../Components/Footer';
 
 const Home = () => {
+  const  username = localStorage.getItem("currentuser")
+  localStorage.setItem('blogList','');
   return (
     <div className='home-container'>
       <NavBar/>
       <div className='panel1'>
+        <h1>Well Come!! {username}</h1>
         <h1>Unlocking the Power of Positive</h1>
         <h2>Publish your passions, your way</h2>
         <h4>Create a unique and beautiful blog easily.</h4>

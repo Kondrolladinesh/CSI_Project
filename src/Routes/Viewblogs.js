@@ -18,7 +18,6 @@ const Viewblogs = () => {
   const [isCreateNewPost, setIsCreateNewPost] = useState(false);
   const [isModifyPost, setIsModifyPost] = useState(false);
   const [editPostId, setEditPostId] = useState("");
-  // const [newcomment, setnewComment] = useState([]);
 
   const getTitle = useRef();
   const getContent = useRef();
@@ -84,7 +83,6 @@ const Viewblogs = () => {
 
   // function to update likes & dislikes
   const updatedetails = (id,islike,isdislike,comment) => {
-    // setnewComment([...newcomment,comment])
     const updatedetails = allPosts.map((eachPost) => {
       if (eachPost.id === id) {
         return {
@@ -149,7 +147,6 @@ const Viewblogs = () => {
         </div>
       ) : (
         allPosts.map((eachPost) =>{
-        // {console.log(eachPost)
         return (
           <Blog
             id={eachPost.id}
