@@ -9,7 +9,7 @@ const Home = () => {
   const  username = localStorage.getItem("currentuser")
   const blog = localStorage.getItem("blogList");
   if(blog === null){
-    localStorage.setItem('blogList',[]);
+    localStorage.setItem('blogList',JSON.stringify([]));
   }
   return (
     <div className='home-container'>
