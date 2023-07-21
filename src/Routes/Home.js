@@ -7,7 +7,10 @@ import Footer from '../Components/Footer';
 
 const Home = () => {
   const  username = localStorage.getItem("currentuser")
-  localStorage.setItem('blogList','');
+  const blog = localStorage.getItem("blogList");
+  if(blog === null){
+    localStorage.setItem('blogList','');
+  }
   return (
     <div className='home-container'>
       <NavBar/>
