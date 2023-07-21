@@ -1,15 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NavBar from '../Components/NavBar';
 import './Home.css';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import img1 from '../Images/bg5.avif';
 import Footer from '../Components/Footer';
 
 const Home = () => {
-  const  username = localStorage.getItem("currentuser")
-  const blog = localStorage.getItem("blogList");
-  if(blog === null){
-    localStorage.setItem('blogList',JSON.stringify([]));
+  const  username = localStorage.getItem("currentuser");
+  const [isCreateNewPost, setIsCreateNewPost] = useState(false);
+  // const blog = localStorage.getItem("blogList");
+  // if(blog === null){
+  //   localStorage.setItem('blogList',JSON.stringify([]));
+  // }
+  const toggleCreateNewPost = () => {
+    setIsCreateNewPost(!isCreateNewPost);
+  };
+  const navigate = useNavigate();
+  if(isCreateNewPost){
+    navigate('/viewblog', { state: isCreateNewPost });
   }
   return (
     <div className='home-container'>
@@ -19,9 +27,10 @@ const Home = () => {
         <h1>Unlocking the Power of Positive</h1>
         <h2>Publish your passions, your way</h2>
         <h4>Create a unique and beautiful blog easily.</h4>
-        <NavLink to="/writeblog">
+        {/* <NavLink to="/writeblog">
           <button className='button-20'>Create your blog</button>
-        </NavLink>
+        </NavLink> */}
+        <button onClick={toggleCreateNewPost} className='button-20'>Create your blog</button>
       </div>
       <div className='panel2'>
         <div>

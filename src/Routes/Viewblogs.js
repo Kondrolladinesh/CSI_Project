@@ -4,6 +4,7 @@ import ModifyBlog from "./ModifyBlog";
 import Blog from "../Components/Blog";
 import NavBar from "../Components/NavBar";
 import './Blog.css';
+import { useLocation } from "react-router-dom";
 
 const Viewblogs = () => {
   // managing states below
@@ -21,6 +22,14 @@ const Viewblogs = () => {
 
   const getTitle = useRef();
   const getContent = useRef();
+
+  //saves the post, when we click the button on home page
+  const { state } = useLocation();
+  useEffect(() => {
+    if (state) {
+      setIsCreateNewPost(true);
+    }
+  }, [state]);
 
   useEffect(() => {
     localStorage.setItem('blogList', JSON.stringify(allPosts));
@@ -92,7 +101,6 @@ const Viewblogs = () => {
           comment: (!islike && !isdislike)?[...eachPost.comment,comment]:[...eachPost.comment]
         };
       }
-
       return eachPost;
     });
     setAllPosts(updatedetails);
@@ -106,7 +114,7 @@ const Viewblogs = () => {
     setAllPosts(modifiedPost);
   };
 
-  if (isCreateNewPost) {
+  if (isCreateNewPost ) {
     return (
       <>
         <Blogpage
