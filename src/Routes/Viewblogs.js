@@ -3,7 +3,7 @@ import Blogpage from "./Blogpage";
 import ModifyBlog from "./ModifyBlog";
 import Blog from "../Components/Blog";
 import NavBar from "../Components/NavBar";
-import './Routes.css'
+import './Blog.css';
 
 const Viewblogs = () => {
   // managing states below
@@ -143,7 +143,7 @@ const Viewblogs = () => {
       <h1>BLOGS</h1>
       {!allPosts.length ? (
         <div>
-          <li>There are no posts yet.</li>
+          <h1>There are no posts yet.</h1>
         </div>
       ) : (
         allPosts.map((eachPost) =>{

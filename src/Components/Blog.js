@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { LuEdit } from "react-icons/lu";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { AiFillLike, AiFillDislike, AiOutlineComment } from "react-icons/ai";
-import './NavBar.css';
+import './Blog.css';
 import ViewMore from './ViewMore';
 
 const Blog = ({ DisLike,Like,Comments,author, id, title, content, editPost, deletePost, updatedetails }) => {
