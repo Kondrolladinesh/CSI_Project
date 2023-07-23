@@ -178,23 +178,29 @@ const Viewblogs = () => {
         <div>
           <h1>There are no posts yet.</h1>
         </div>
-      ) : (
-        Data.map((eachPost) =>{
-        return (
-          <Blog
-            id={eachPost.id}
-            key={eachPost.id}
-            title={eachPost.title}
-            author = {eachPost.username}
-            updatedetails = {updatedetails}
-            content={eachPost.content}
-            editPost={editPost}
-            deletePost={deletePost}
-            Like={eachPost.likes}
-            DisLike={eachPost.dislikes}
-            Comments={eachPost.comment}
-          />
-        )})
+      ) : ( !Data.length ?(
+            <div>
+              <h1>Related result not found.</h1>
+            </div>
+          ):(
+            Data.map((eachPost) =>{
+              return (
+                <Blog
+                  id={eachPost.id}
+                  key={eachPost.id}
+                  title={eachPost.title}
+                  author = {eachPost.username}
+                  updatedetails = {updatedetails}
+                  content={eachPost.content}
+                  editPost={editPost}
+                  deletePost={deletePost}
+                  Like={eachPost.likes}
+                  DisLike={eachPost.dislikes}
+                  Comments={eachPost.comment}
+                />
+              )}
+            )
+          )
       )}
       <button
         className="button-23"
