@@ -19,6 +19,7 @@ const Viewblogs = () => {
   const [isCreateNewPost, setIsCreateNewPost] = useState(false);
   const [isModifyPost, setIsModifyPost] = useState(false);
   const [editPostId, setEditPostId] = useState("");
+  const [Data, setData] = useState([]);
 
   const getTitle = useRef();
   const getContent = useRef();
@@ -114,6 +115,21 @@ const Viewblogs = () => {
     setAllPosts(modifiedPost);
   };
 
+  useEffect(() => {
+    setData(allPosts);
+  }, [allPosts]);
+
+  const searchPost = (e) => {
+    if (e.target.value === '') {
+      setData(allPosts);
+    } else {
+      const filterDetails = Data.filter((eachPost) => {
+        return eachPost.title.toUpperCase().includes(e.target.value.toUpperCase());
+      });
+      setData(filterDetails);
+    }
+  };
+
   if (isCreateNewPost ) {
     return (
       <>
@@ -149,12 +165,21 @@ const Viewblogs = () => {
     <>
       <NavBar/>
       <h1>BLOGS</h1>
+      <div className="searchbar">
+        <input
+          type="search"
+          onChange={(e) => {
+            searchPost(e);
+          }}
+          placeholder="Search blog with title"
+        />
+      </div>
       {!allPosts.length ? (
         <div>
           <h1>There are no posts yet.</h1>
         </div>
       ) : (
-        allPosts.map((eachPost) =>{
+        Data.map((eachPost) =>{
         return (
           <Blog
             id={eachPost.id}

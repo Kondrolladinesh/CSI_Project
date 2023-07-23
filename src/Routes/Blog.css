@@ -58,6 +58,13 @@
 
 
 /* CSS For ViewBlog*/ 
+
+.searchbar input{
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 20px;
+    width: 30%;
+}
 .button-23 {
     background-color: rgb(66,66,66);
     border: none;
