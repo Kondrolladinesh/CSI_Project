@@ -8,10 +8,6 @@ import Footer from '../Components/Footer';
 const Home = () => {
   const  username = localStorage.getItem("currentuser");
   const [isCreateNewPost, setIsCreateNewPost] = useState(false);
-  // const blog = localStorage.getItem("blogList");
-  // if(blog === null){
-  //   localStorage.setItem('blogList',JSON.stringify([]));
-  // }
   const toggleCreateNewPost = () => {
     setIsCreateNewPost(!isCreateNewPost);
   };
