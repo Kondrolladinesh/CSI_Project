@@ -23,13 +23,10 @@ const Home = () => {
     <div className='home-container'>
       <NavBar/>
       <div className='panel1'>
-        <h1>Well Come!! {username}</h1>
+        <h1 className='user'>Well Come!! {username}</h1>
         <h1>Unlocking the Power of Positive</h1>
         <h2>Publish your passions, your way</h2>
         <h4>Create a unique and beautiful blog easily.</h4>
-        {/* <NavLink to="/writeblog">
-          <button className='button-20'>Create your blog</button>
-        </NavLink> */}
         <button onClick={toggleCreateNewPost} className='button-20'>Create your blog</button>
       </div>
       <div className='panel2'>
