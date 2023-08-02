@@ -20,28 +20,24 @@
   overflow: hidden;
   white-space: nowrap;
   font-size: 40px;
-  animation: blink .75s step-end infinite, typing 3.5s steps(40, end);
+  animation: typing 3.5s steps(40, end);
   padding: 0 20%;
+  @media screen and (max-width:768px) {
+    padding: 0 5%;
+    overflow: visible;
+    white-space: normal;
+  }
 }
 
 @keyframes typing{
   from{
-    width: 0;
+    width: 0%;
   }
   to{
     width: 60%;
   }
 }
 
-@keyframes blink {
-  from{
-    border-color: transparent;
-  }
-  50%{
-    border-color: orange;
-  }
-  
-}
 .panel1 h1{
     font-size: 40px;
 }
