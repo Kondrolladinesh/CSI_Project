@@ -16,7 +16,7 @@
     padding: 20px;
 }
 
-.panel1 .user{
+/* .panel1 .user{
   overflow: hidden;
   white-space: nowrap;
   font-size: 40px;
@@ -36,7 +36,7 @@
   to{
     width: 60%;
   }
-}
+} */
 
 .panel1 h1{
     font-size: 40px;
